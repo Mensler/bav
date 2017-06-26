@@ -6,7 +6,6 @@ namespace malkusch\bav;
  * Configuration
  *
  * @author Markus Malkusch <markus@malkusch.de>
- * @link bitcoin:1335STSwu9hST4vcMRppEPgENMHD2r1REK Donations
  * @license WTFPL
  * @see ConfigurationRegistry
  * @api
@@ -100,7 +99,7 @@ class Configuration
     {
         return $this->backendContainer;
     }
-    
+
     /**
      * Sets the encoding.
      */

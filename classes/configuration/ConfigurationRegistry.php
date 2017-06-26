@@ -27,7 +27,6 @@ namespace malkusch\bav;
  * </code>
  *
  * @author Markus Malkusch <markus@malkusch.de>
- * @link bitcoin:1335STSwu9hST4vcMRppEPgENMHD2r1REK Donations
  * @license WTFPL
  * @see Configuration
  * @api
@@ -36,7 +35,7 @@ class ConfigurationRegistry
 {
 
     const BAV_PATH = "/../../configuration.php";
-    
+
     const INCLUDE_PATH = "bav/configuration.php";
 
     /**
@@ -62,7 +61,7 @@ class ConfigurationRegistry
         $configuration = $locator->locate();
         if ($configuration == null) {
             $configuration = new DefaultConfiguration();
-            
+
         }
         self::setConfiguration($configuration);
     }

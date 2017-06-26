@@ -11,12 +11,11 @@ use \malkusch\index\IndexException;
  * any DBS.
  *
  * @author Markus Malkusch <markus@malkusch.de>
- * @link bitcoin:1335STSwu9hST4vcMRppEPgENMHD2r1REK Donations
  * @license WTFPL
  */
 class FileDataBackend extends DataBackend
 {
-    
+
     // @codingStandardsIgnoreStart
     const DOWNLOAD_URI = "http://www.bundesbank.de/Redaktion/DE/Standardartikel/Aufgaben/Unbarer_Zahlungsverkehr/bankleitzahlen_download.html";
     // @codingStandardsIgnoreEnd
@@ -30,7 +29,7 @@ class FileDataBackend extends DataBackend
      * @var FileParser
      */
     private $parser;
-    
+
     /**
      * @var Index_FixedSize
      */
@@ -49,7 +48,7 @@ class FileDataBackend extends DataBackend
         $this->parser = new FileParser($file);
         $this->fileUtil = new FileUtil();
     }
-    
+
     /**
      * @return FixedSizeIndex
      */
@@ -61,7 +60,7 @@ class FileDataBackend extends DataBackend
                 FileParser::BANKID_OFFSET,
                 FileParser::BANKID_LENGTH
             );
-            
+
         }
         return $this->index;
     }
@@ -245,7 +244,7 @@ class FileDataBackend extends DataBackend
     {
         try {
             $result = $this->getIndex()->search($bankID);
-        
+
             if ($result == null) {
                 throw new BankNotFoundException($bankID);
 
@@ -261,7 +260,7 @@ class FileDataBackend extends DataBackend
 
         } catch (IndexException $e) {
             throw new DataBackendIOException($e->getMessage(), $e->getCode(), $e);
-            
+
         }
     }
 
@@ -419,7 +418,7 @@ class FileDataBackend extends DataBackend
         }
         return $agencies;
     }
-    
+
     public function free()
     {
         parent::free();

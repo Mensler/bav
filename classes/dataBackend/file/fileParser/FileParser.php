@@ -26,7 +26,6 @@ namespace malkusch\bav;
  * @package classes
  * @subpackage dataBackend
  * @author Markus Malkusch <markus@malkusch.de>
- * @link bitcoin:1335STSwu9hST4vcMRppEPgENMHD2r1REK Donations
  * @copyright Copyright (C) 2006 Markus Malkusch
  */
 class FileParser
@@ -73,7 +72,7 @@ class FileParser
      * @var resource
      */
     private $fp;
-    
+
     /**
      * @var string
      */
@@ -150,7 +149,7 @@ class FileParser
             );
 
         }
-        
+
         // size + 1, because the last line has no line break
         $this->lines = floor(($filesize + 1) / $this->lineLength);
     }

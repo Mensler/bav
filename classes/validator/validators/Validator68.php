@@ -25,7 +25,6 @@ namespace malkusch\bav;
  * @package classes
  * @subpackage validator
  * @author Markus Malkusch <markus@malkusch.de>
- * @link bitcoin:1335STSwu9hST4vcMRppEPgENMHD2r1REK Donations
  * @copyright Copyright (C) 2006 Markus Malkusch
  */
 class Validator68 extends ValidatorChain
@@ -52,11 +51,11 @@ class Validator68 extends ValidatorChain
     protected function init($account)
     {
         parent::init($account);
-        
+
         // Die Kontonummern [..] enthalten keine führenden Nullen.
         $this->account = ltrim($this->account, "0");
     }
-    
+
     protected function getResult()
     {
         switch (strlen($this->account)) {

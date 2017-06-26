@@ -13,7 +13,6 @@ namespace malkusch\bav;
  * If no UTF-8 encoding is supported ISO-8859-15 will be used.
  *
  * @author Markus Malkusch <markus@malkusch.de>
- * @link bitcoin:1335STSwu9hST4vcMRppEPgENMHD2r1REK Donations
  * @license WTFPL
  * @api
  */

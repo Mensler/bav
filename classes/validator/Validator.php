@@ -23,7 +23,6 @@ namespace malkusch\bav;
  * @package classes
  * @subpackage validator
  * @author Markus Malkusch <markus@malkusch.de>
- * @link bitcoin:1335STSwu9hST4vcMRppEPgENMHD2r1REK Donations
  * @copyright Copyright (C) 2006 Markus Malkusch
  */
 abstract class Validator
@@ -74,7 +73,7 @@ abstract class Validator
     {
         if (is_string($account)) {
             return;
-            
+
         }
         trigger_error(
             "Only validation of strings are defined."
@@ -82,7 +81,7 @@ abstract class Validator
             E_USER_WARNING
         );
     }
-    
+
     /**
      * Validates a bank account.
      *
@@ -101,7 +100,7 @@ abstract class Validator
         try {
             if ($account == null) {
                 return false;
-                
+
             }
             $this->checkType($account);
             $this->init($account);

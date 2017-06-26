@@ -6,7 +6,6 @@ namespace malkusch\bav;
  * Downloads an URI
  *
  * @author Markus Malkusch <markus@malkusch.de>
- * @link bitcoin:1335STSwu9hST4vcMRppEPgENMHD2r1REK Donations
  * @license WTFPL
  */
 class Downloader
