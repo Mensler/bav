@@ -16,6 +16,12 @@
     "autoload": {
         "files": ["autoloader/autoloader.php"]
     },
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/mensler/php-index.git"
+        }
+    ],
     "require": {
         "php": ">=7.0.0",
         "malkusch/php-index": "~0.1"
